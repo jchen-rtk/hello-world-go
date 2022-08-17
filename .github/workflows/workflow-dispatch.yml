@@ -1,0 +1,10 @@
+name: Check go module dependencies
+on: [workflow_dispatch]
+jobs:
+  go-mod-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: jchen-rtk/go-mod-check@v1
+        with:
+          directory: './'
